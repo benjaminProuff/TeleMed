@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+  font-family: "muli", sans-serif;
+  color: black;
+  background-color: #fff;
+  margin-top: 5vh;
+  margin-right: 15vw;
+  margin-left: 15vw;
+}
+
+ul li a {
+  color: inherit; /* change la couleur du texte pour correspondre à la couleur du texte environnant */
+  text-decoration: none; /* enlève le soulignement */
+  opacity: 0.5; /* rend le lien semi-transparent */
+  font-family: "muli", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul li a:hover {
+  opacity: 1; /* rend le lien complètement opaque lors du survol */
+  font-family: "muli", sans-serif;
+  font-weight: 400;
+  font-style: bold;
+}
+
+h1 {
+  font-family: "Muli", sans-serif;
+  font-style: bold;
+}
+
+hr {
+  width: 5%;
+  margin: auto;
+  height: 3px;
+  background-color: #000;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 354px);
+  row-gap: 34px; /* Espace vertical entre les blocs */
+  column-gap: 34px; /* Espace horizontal entre les blocs */
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  width: 350px;
+  height: 354px;
+  background-color: #ccc; /* This is just for demonstration, you can remove or change it */
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.1); /* Ceci rendra l'effet d'ombre plus diffus et léger */
+}
+
+/* Chatbot */
+/* CSS */
+#chat-icon img {
+  position: fixed;
+
+  bottom: 20px;
+  right: 90px;
+  width: 160px;
+  height: 160px;
+  line-height: center;
+}
+
+#chat-icon img:hover {
+  cursor: pointer;
+}
+
+#chat-message {
+  display: none;
+  /* Vos autres styles ici... */
+}
+
+#chat-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(234, 238, 243);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#chat-message button {
+  cursor: pointer;
+}
+
+/* Sélectionnez les images dans les cartes de la section "check out our latest article" */
+.card {
+  transition: transform 0.3s ease-in; /* Animation smooth */
+}
+
+.card:hover {
+  transform: scale(1.01); /* Agrandit l'image de 10% lorsque vous la survolez */
+}
+
+/* Sélectionnez les images dans les cartes de la section "check out our latest article" */
+.block {
+  transition: transform 0.3s ease-in; /* Animation smooth */
+}
+
+.block:hover {
+  transform: scale(1.01); /* Agrandit l'image de 10% lorsque vous la survolez */
+}
+
+.btn-outline {
+  width: 200px;
+  height: 56px;
+  border-radius: 55px;
+  background-color: white;
+  margin-top: 6vh;
+  border: none;
+  color: #458ff6;
+  border: 1.4px solid #458ff6;
+  font-family: Muli;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.btn-outline:hover {
+  transform: animate(1s ease-in-out);
+  width: 200px;
+  height: 56px;
+  border-radius: 55px;
+  background-color: #458ff6;
+  margin-top: 6vh;
+  border: none;
+  color: white;
+  border: 1.4px solid #458ff6;
+  font-family: Muli;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.avatarclient:hover {
+  transform: rotateZ(360deg);
+  transition: 1s;
+}

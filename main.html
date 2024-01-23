@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/hal7uxg.css" />
+  </head>
+
+  <body>
+    <!-- Robot Container -->
+    <!-- HTML -->
+    <div id="chat-icon">
+      <img
+        src="assets/chatbotgif.gif"
+        alt="Chat Icon"
+        onclick="showMessage();"
+        style="background: transparent"
+      />
+    </div>
+
+    <div
+      id="chat-message"
+      style="
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        min-width: 464px;
+        min-height: 690px;
+        display: none;
+      "
+    >
+      <div
+        style="
+          background-color: white;
+          margin: -20px;
+          border-radius: 20px;
+          padding: 20px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+          "
+        >
+          <button
+            onclick="hideMessage()"
+            style="
+              background: transparent;
+              font-style: bold;
+              border: transparent;
+              height: 30px;
+              width: 30px;
+            "
+          >
+            X
+          </button>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              margin-bottom: 2vh;
+            "
+          >
+            <img
+              src="assets/chatbotgif.gif"
+              alt="chatbot"
+              style="height: 60px; width: 70px"
+            />
+            <div style="display: flex; flex-direction: column">
+              <p
+                style="
+                  font-size: 22px;
+                  color: black;
+                  font-style: bold;
+                  margin-top: 1vh;
+                "
+              >
+                ChatBot
+              </p>
+              <p style="font-size: 16px; color: black; margin-top: 0.5vh">
+                <span style="color: greenyellow">O</span>nline
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          background-color: rgb(234, 238, 243);
+          margin-left: -20px;
+          margin-right: -20px;
+          margin-bottom: -200px;
+
+          display: flex;
+        "
+      >
+        <div style="display: flex; margin: 20px; flex-direction: column">
+          <div style="display: flex; margin-top: 1vh">
+            <img
+              src="assets/robot3.png"
+              alt=""
+              style="border-radius: 50px; height: 21px; width: 21px"
+            />
+            <p style="margin-top: 0.5vh; margin-left: 0.5vw">ChatBot</p>
+          </div>
+          <p
+            id="messageBot"
+            style="
+              margin: 20px;
+              max-width: 20vw;
+              border-radius: 20px 20px 20px 0px;
+              font-family: muli;
+
+              background-color: white;
+              padding: 15px;
+              text-aligns: start;
+            "
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <nav>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div style="display: flex; align-items: center">
+          <img
+            src="assets/logo.svg"
+            alt="Logo"
+            style="width: 41px; height: 41px"
+          />
+          <h1 style="width: 107px; margin-left: 10px; margin-top: 0.5vh">
+            TeleMed
+          </h1>
+        </div>
+        <ul
+          style="
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            width: 545px;
+            height: 23px;
+            justify-content: flex-end;
+          "
+        >
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Find a doctor</a></li>
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <article>
+        <div
+          style="
+            display: flex;
+            margin-top: 10vh;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div>
+            <h2
+              style="
+                width: 427px;
+                height: 112px;
+                font-family: Muli;
+                font-weight: 700;
+                font-size: 48px;
+                margin-bottom: 3vh;
+              "
+            >
+              Virtual healthcare for you
+            </h2>
+            <p
+              style="
+                width: 465px;
+                height: 96px;
+                font-family: Muli;
+                font-weight: 300;
+                font-size: 21px;
+                line-height: 32px;
+                color: #7d7987;
+                margin-bottom: 3vh;
+              "
+            >
+              TeleMed provides progressive, and affordable healthcare,
+              accessible on mobile and online for everyone
+            </p>
+            <button
+              style="
+                width: 200px;
+                height: 56px;
+                border-radius: 55px;
+                background-color: #458ff6;
+                border: none;
+                color: white;
+                font-family: Muli;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 60px;
+              "
+            >
+              Consult today
+            </button>
+          </div>
+          <div>
+            <img src="assets/illustration.png" alt="img" />
+          </div>
+        </div>
+      </article>
+
+      <section>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20vh;
+          "
+        >
+          <h2
+            style="
+              width: 212px;
+              height: 56px;
+              font-size: 36px;
+              line-height: 56px;
+              font-weight: 700;
+              font-style: bold;
+              margin-bottom: 3vh;
+              color: black;
+            "
+          >
+            Our services
+          </h2>
+          <hr style="margin-bottom: 3vh" />
+          <h4
+            style="
+              width: 952px;
+              height: 60px;
+              font-weight: 300;
+              font-size: 18px;
+              line-height: 30px;
+              color: #7d7987;
+              text-align: center;
+            "
+          >
+            We provide to you the best choiches for you. Adjust it to your
+            health needs and make sure your undergo treatment with our highly
+            qualified doctors you can consult with us which type of service is
+            suitable for your health
+          </h4>
+        </div>
+      </section>
+
+      <section
+        style="justify-items: center; background-color: white; margin-top: 8vh"
+      >
+        <div class="container">
+          <div
+            class="block"
+            style="
+              border-radius: 20px;
+              background-color: white;
+
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+              margin: 20px;
+              justify-content: center;
+            "
+          >
+            <img src="assets/Frame.png" alt="" style="max-width: 30%" />
+            <h2
+              style="
+                width: 160px;
+                height: 56px;
+                font-size: 24px;
+                line-height: 56px;
+                margin-top: 2vh;
+              "
+            >
+              Search doctor
+            </h2>
+            <p
+              style="
+                width: 266px;
+                height: 84px;
+                font-size: 16px;
+                line-height: 28px;
+                color: #7d7987;
+              "
+            >
+              Choose your doctor from thousands of specialist, general, and
+              trusted hospitals
+            </p>
+          </div>
+          <div
+            class="block"
+            style="
+              border-radius: 20px;
+              background-color: white;
+
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+              margin: 30px;
+              justify-content: center;
+            "
+          >
+            <img src="assets/Frame (1).png" alt="" style="max-width: 20%" />
+            <h2 style="font-size: 24px; line-height: 56px; margin-top: 2vh">
+              Online pharmacy
+            </h2>
+            <p
+              style="
+                width: 266px;
+                height: 84px;
+                font-size: 16px;
+                line-height: 28px;
+                color: #7d7987;
+              "
+            >
+              Buy your medicines with our mobile application with a simple
+              delivery system
+            </p>
+          </div>
+          <div
+            class="block"
+            style="
+              border-radius: 20px;
+              background-color: white;
+
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+              margin: 30px;
+              justify-content: center;
+            "
+          >
+            <img src="assets/Frame (2).png" alt="" style="max-width: 20%" />
+            <h2 style="font-size: 24px; line-height: 56px; margin-top: 2vh">
+              Consultation
+            </h2>
+            <p
+              style="
+                width: 266px;
+                height: 84px;
+                font-size: 16px;
+                line-height: 28px;
+                color: #7d7987;
+              "
+            >
+              Free consultation with our trusted doctors and get the best
+              recomendations
+            </p>
+          </div>
+          <div
+            class="block"
+            style="
+              border-radius: 20px;
+              background-color: white;
+
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+              margin: 30px;
+              justify-content: center;
+            "
+          >
+            <img src="assets/Frame (3).png" alt="" style="max-width: 20%" />
+            <h2 style="font-size: 24px; line-height: 56px; margin-top: 2vh">
+              Details info
+            </h2>
+            <p
+              style="
+                width: 266px;
+                height: 84px;
+                font-size: 16px;
+                line-height: 28px;
+                color: #7d7987;
+              "
+            >
+              Free consultation with our trusted doctors and get the best
+              recomendations
+            </p>
+          </div>
+          <div
+            class="block"
+            style="
+              border-radius: 20px;
+              background-color: white;
+
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+              margin: 30px;
+              justify-content: center;
+            "
+          >
+            <img src="assets/Frame (4).png" alt="" style="max-width: 20%" />
+            <h2 style="font-size: 24px; line-height: 56px; margin-top: 2vh">
+              Emergency care
+            </h2>
+            <p
+              style="
+                width: 266px;
+                height: 84px;
+                font-size: 16px;
+                line-height: 28px;
+                color: #7d7987;
+              "
+            >
+              You can get 24/7 urgent care for yourself or your children and
+              your lovely family
+            </p>
+          </div>
+          <div
+            class="block"
+            style="
+              border-radius: 20px;
+              background-color: white;
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+              margin: 30px;
+              justify-content: center;
+            "
+          >
+            <img src="assets/Frame (5).png" alt="" style="max-width: 20%" />
+            <h2 style="font-size: 24px; line-height: 56px; margin-top: 2vh">
+              Tracking
+            </h2>
+            <p
+              style="
+                width: 266px;
+                height: 84px;
+                font-size: 16px;
+                line-height: 28px;
+                color: #7d7987;
+              "
+            >
+              Track and save your medical history and health data
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style="display: flex; justify-content: center">
+        <button class="btn-outline">Learn more</button>
+      </section>
+
+      <section>
+        <div
+          style="
+            display: flex;
+            margin-top: 20vh;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div>
+            <img src="assets/illustration3.png" alt="img" />
+          </div>
+          <div>
+            <h2
+              style="
+                width: 481px;
+                height: 112px;
+                font-family: Muli;
+                font-weight: 700;
+                font-size: 48px;
+                margin-bottom: 3vh;
+              "
+            >
+              Leading healthcare providers
+            </h2>
+            <p
+              style="
+                width: 465px;
+                height: 96px;
+                font-family: Muli;
+                font-weight: 300;
+                font-size: 21px;
+                line-height: 32px;
+                color: #7d7987;
+                margin-bottom: 3vh;
+              "
+            >
+              TeleMed provides progressive, and affordable healthcare,
+              accessible on mobile and online for everyone. To us, it’s not just
+              work. We take pride in the solutions we deliver
+            </p>
+            <button class="btn-outline">Learn more</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div
+          style="
+            display: flex;
+            margin-top: 20vh;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div>
+            <h2
+              style="
+                width: 481px;
+                height: 112px;
+                font-family: Muli;
+                font-weight: 700;
+                font-size: 48px;
+                margin-bottom: 3vh;
+              "
+            >
+              Download our mobile apps
+            </h2>
+            <p
+              style="
+                width: 420px;
+                height: 96px;
+                font-family: Muli;
+                font-weight: 300;
+                font-size: 21px;
+                line-height: 32px;
+                color: #7d7987;
+                margin-bottom: 3vh;
+              "
+            >
+              Ours dedicated patient engagement app and web portal allow you to
+              access information instantaneously (no tedeous form, long calls,
+              or administrative hassle) and securely
+            </p>
+            <button class="btn-outline">Download</button>
+          </div>
+          <div>
+            <img src="assets/illustration4.png" alt="img" />
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 20vh">
+        <div
+          class="testimonial-card"
+          style="
+            width: 70vw;
+            height: 400px;
+            margin: auto;
+            border-radius: 24px;
+            background: linear-gradient(208deg, #67c3f3 9.05%, #5a98f2 76.74%);
+            padding: 20px;
+          "
+        >
+          <h2
+            style="
+              display: flex;
+              margin-top: 10px;
+              width: 522px;
+              height: 48px;
+              color: white;
+              justify-content: center;
+              font-style: bold;
+              line-height: 48px;
+              margin: auto;
+            "
+          >
+            What our customer are saying
+          </h2>
+          <hr
+            style="
+              width: 5vw;
+              margin-top: 3vh;
+              border: 1.4px solid white;
+              background-color: white;
+              border-radius: 10px;
+            "
+          />
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+            "
+          >
+            <div style="display: flex; margin-top: 10vh; align-items: center">
+              <img
+                class="avatarclient"
+                src="assets/avatar1.png"
+                alt="Edward Newgate"
+                style="
+                  width: 141px;
+                  height: 141px;
+                  border: solid 3px white;
+                  border-radius: 50%;
+                "
+              />
+              <div style="margin-left: 20px">
+                <p
+                  class="name"
+                  style="
+                    color: #fff;
+
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                >
+                  Edward Newgate
+                </p>
+                <p
+                  class="title"
+                  style="
+                    color: rgba(255, 255, 255, 0.85);
+
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    margin-top: 10px;
+                  "
+                >
+                  Founder Circle
+                </p>
+              </div>
+            </div>
+            <blockquote
+              style="
+                width: 420px;
+                height: 120px;
+                color: rgba(255, 255, 255, 0.9);
+                font-family: muli;
+
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px; /* 157.895% */
+                margin-top: 8vh;
+              "
+            >
+              "Our dedicated patient engagement app and web portal allow you to
+              access information instantaneously (no tedious form, long calls,
+              or administrative hassle) and securely!"
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1
+          style="
+            margin-top: 20vh;
+            display: flex;
+            justify-content: center;
+            font-size: 36px;
+            font-style: bold;
+            line-height: 56px;
+          "
+        >
+          Check out our lastest article
+        </h1>
+        <hr style="margin-top: 3vh" />
+
+        <div style="margin-top: 5vh; display: flex; justify-content: center">
+          <div
+            class="card"
+            style="
+              width: 350px;
+              height: 512px;
+              flex-shrink: 0;
+              border-radius: 20px;
+              background: #fff;
+
+              /* drop shadow */
+              box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+              border-radius: 20px;
+              margin: 20px;
+            "
+          >
+            <img
+              src="assets/article1.png"
+              alt="Image 1"
+              style="border-radius: 20px 20px 0 0"
+            />
+            <h2
+              style="
+                color: #000;
+
+                font-size: 21px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px; /* 152.381% */
+                margin: 20px;
+              "
+            >
+              Disease detection, check up in the laboratory
+            </h2>
+            <p
+              style="
+                color: #7d7987;
+
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px; /* 175% */
+                margin: 20px;
+              "
+            >
+              In this case, the role of the health laboratory is very important
+              to do a disease detection...
+            </p>
+            <a
+              href="#"
+              style="text-decoration: none; color: #458ff6; margin: 20px"
+              >Read more -></a
+            >
+          </div>
+          <div
+            class="card"
+            style="
+              width: 350px;
+              height: 512px;
+              flex-shrink: 0;
+              border-radius: 20px;
+              background: #fff;
+
+              /* drop shadow */
+              box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+              border-radius: 20px;
+              margin: 20px;
+            "
+          >
+            <img
+              src="assets/article2.png"
+              alt="Image 1"
+              style="border-radius: 20px 20px 0 0"
+            />
+            <h2
+              style="
+                color: #000;
+
+                font-size: 21px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px; /* 152.381% */
+                margin: 20px;
+              "
+            >
+              Herbal medicines that are safe for consumption
+            </h2>
+            <p
+              style="
+                color: #7d7987;
+
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px; /* 175% */
+                margin: 20px;
+              "
+            >
+              Herbal medicine is very widely used at this time because of its
+              very good for your health...
+            </p>
+            <a
+              href="#"
+              style="text-decoration: none; color: #458ff6; margin: 20px"
+              >Read more -></a
+            >
+          </div>
+          <div
+            class="card"
+            style="
+              width: 350px;
+              height: 512px;
+              flex-shrink: 0;
+              border-radius: 20px;
+              background: #fff;
+
+              /* drop shadow */
+              box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+              border-radius: 20px;
+              margin: 20px;
+            "
+          >
+            <img
+              src="assets/article3.png"
+              alt="Image 1"
+              style="border-radius: 20px 20px 0 0"
+            />
+            <h2
+              style="
+                color: #000;
+
+                font-size: 21px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px; /* 152.381% */
+                margin: 20px;
+              "
+            >
+              Natural care for healthy facial skin
+            </h2>
+            <p
+              style="
+                color: #7d7987;
+
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px; /* 175% */
+                margin: 20px;
+              "
+            >
+              A healthy lifestyle should start from now and also for your skin
+              health. There are some...
+            </p>
+            <a
+              href="#"
+              style="text-decoration: none; color: #458ff6; margin: 20px"
+              >Read more -></a
+            >
+          </div>
+        </div>
+      </section>
+      <section style="display: flex; justify-content: center">
+        <button class="btn-outline">View all</button>
+      </section>
+    </main>
+  </body>
+
+  <footer
+    class="footer"
+    style="
+      background: linear-gradient(183deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+      color: white;
+      width: calc(100vw - 1vw);
+      margin-left: -15vw;
+      margin-right: -15vw;
+      margin-top: 20vh;
+      display: flex;
+      height: 432px;
+      justify-content: space-start;
+      padding: 110px;
+    "
+  >
+    <div style="display: flex">
+      <div
+        style="
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-right: 10vw;
+        "
+      >
+        <div style="display: flex; flex-direction: row; align-items: center">
+          <img src="assets/logo2.png" alt="" />
+          <p
+            style="
+              color: #fff;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+
+              margin-left: 10px;
+            "
+          >
+            TeleMedcine
+          </p>
+        </div>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px; /* 155.556% */
+            width: 391px;
+          "
+        >
+          TeleMed provides progressive, and affordable healthcare, accessible on
+          mobile and online for everyone
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          ©TeleMedecine PTY LTD 2024. All rights reserved
+        </p>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: space-between;
+        "
+      >
+        <p
+          style="
+            color: #fff;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          "
+        >
+          Compagny
+        </p>
+
+        <p
+          style="
+            color: #fff;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px; /* 155.556% */
+            width: 391px;
+          "
+        >
+          About
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Testimonials
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Find a doctor
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Apps
+        </p>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: space-between;
+        "
+      >
+        <p
+          style="
+            color: #fff;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          "
+        >
+          Region
+        </p>
+
+        <p
+          style="
+            color: #fff;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px; /* 155.556% */
+            width: 391px;
+          "
+        >
+          Indonesia
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Singapore
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Hongkong
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Canada
+        </p>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: space-between;
+        "
+      >
+        <p
+          style="
+            color: #fff;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          "
+        >
+          Help
+        </p>
+
+        <p
+          style="
+            color: #fff;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px; /* 155.556% */
+            width: 391px;
+          "
+        >
+          Help center
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Contact support
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          Instructions
+        </p>
+        <p
+          style="
+            color: #fff;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px; /* 175% */
+            font-size: 16px;
+          "
+        >
+          How it works
+        </p>
+      </div>
+    </div>
+  </footer>
+</html>
